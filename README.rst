@@ -91,7 +91,7 @@ Portable to all releases of both Python 3 and Python 2.
 
 (The oldest tested is 2.5, but it will likely work on all
 Python 2 versions and probably on even earlier versions,
-when paired with something like |with|_).
+when paired with something like |with|_.)
 
 .. |with| replace:: ``with-as-a-function``
 .. _with: https://pypi.org/with-as-a-function
