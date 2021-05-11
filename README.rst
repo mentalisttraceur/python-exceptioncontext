@@ -81,7 +81,7 @@ statement, and freely composable with other code:
 .. code:: python
 
     with cause(earlier_exception):
-        helper_function_to_which_might_raise_an_exception()
+        helper_function()
 
 
 Portability
