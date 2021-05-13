@@ -14,6 +14,7 @@ __all__ = ('context', 'cause', 'suppress_context')
 
 
 class _ExceptionContext(object):
+    # pylint: disable=bad-option-value,useless-object-inheritance
     """Context manager that sets an attribute on exceptions raised in it."""
 
     __slots__ = ('_attribute', '_value')
@@ -44,7 +45,7 @@ except AttributeError:
     _ExceptionContext.__name__ = '_ExceptionContext'
 
 
-def context(context):
+def context(context):  # pylint: disable=redefined-outer-name
     """Create context manager that sets ``__context__`` on exceptions.
 
     Arguments:
@@ -57,7 +58,7 @@ def context(context):
     return _ExceptionContext('__context__', context)
 
 
-def cause(cause):
+def cause(cause):  # pylint: disable=redefined-outer-name
     """Create context manager that sets ``__cause__`` on exceptions.
 
     Arguments:
