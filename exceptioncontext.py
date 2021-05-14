@@ -9,15 +9,13 @@ Provides a different way of controling exception chaining
 beyond just ``raise ... from ...``.
 """
 
-__version__ = '1.0.4'
+__version__ = '1.0.5'
 __all__ = ('context', 'cause', 'suppress_context')
 
 
 class _ExceptionContext(object):
     # pylint: disable=bad-option-value,useless-object-inheritance
     """Context manager that sets an attribute on exceptions raised in it."""
-
-    __slots__ = ('_attribute', '_value')
 
     def __init__(self, attribute, value):
         self._attribute = attribute
