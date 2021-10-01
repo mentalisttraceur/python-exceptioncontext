@@ -1,7 +1,6 @@
 # SPDX-License-Identifier: 0BSD
 # Copyright 2019 Alexander Kozhevnikov <mentalisttraceur@gmail.com>
 
-
 """Context managers for controlling exception chaining.
 
 Provides a different way of controling exception chaining
@@ -9,12 +8,11 @@ Provides a different way of controling exception chaining
 beyond just ``raise ... from ...``.
 """
 
-__version__ = '1.0.5'
+__version__ = '1.0.6'
 __all__ = ('context', 'cause', 'suppress_context')
 
 
 class _ExceptionContext(object):
-    # pylint: disable=bad-option-value,useless-object-inheritance
     """Context manager that sets an attribute on exceptions raised in it."""
 
     def __init__(self, attribute, value):
@@ -43,7 +41,7 @@ except AttributeError:
     _ExceptionContext.__name__ = '_ExceptionContext'
 
 
-def context(context):  # pylint: disable=redefined-outer-name
+def context(context):
     """Create context manager that sets ``__context__`` on exceptions.
 
     Arguments:
@@ -56,7 +54,7 @@ def context(context):  # pylint: disable=redefined-outer-name
     return _ExceptionContext('__context__', context)
 
 
-def cause(cause):  # pylint: disable=redefined-outer-name
+def cause(cause):
     """Create context manager that sets ``__cause__`` on exceptions.
 
     Arguments:
