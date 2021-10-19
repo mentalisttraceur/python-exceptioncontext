@@ -8,7 +8,7 @@ Provides a different way of controling exception chaining
 beyond just ``raise ... from ...``.
 """
 
-__version__ = '1.0.6'
+__version__ = '1.0.7'
 __all__ = ('context', 'cause', 'suppress_context')
 
 
