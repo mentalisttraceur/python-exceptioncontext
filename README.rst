@@ -51,32 +51,8 @@ Manually control context suppression (set ``__suppress_context__``):
     with suppress_context(False):
         raise Exception("foo")
 
-Reduce repetition in code like
-
-.. code:: python
-
-    if some_condition:
-        raise SomeError("foo") from earlier_exception
-    elif other_condition:
-        raise OtherError("bar") from earlier_exception
-    else:
-        raise Exception("qux") from earlier_exception
-
-by turning it into
-
-.. code:: python
-
-    with context(earlier_exception):
-        if some_condition:
-            raise SomeError("foo")
-        elif other_condition:
-            raise OtherError("bar")
-        else:
-            raise Exception("qux")
-
-You now have more freedom in refactoring exception logic,
-because chaining is fully independent of the ``raise``
-statement, and freely composable with other code:
+``exceptioncontext`` makes exception chaining fully independent of
+the ``raise`` statement, and freely composable with other code:
 
 .. code:: python
 
