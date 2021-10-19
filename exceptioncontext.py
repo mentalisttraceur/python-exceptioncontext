@@ -34,13 +34,6 @@ class _ExceptionContext(object):
         return False
 
 
-# Portability for some minimal Python implementations:
-try:
-    _ExceptionContext.__name__
-except AttributeError:
-    _ExceptionContext.__name__ = '_ExceptionContext'
-
-
 def context(context):
     """Create context manager that sets ``__context__`` on exceptions.
 
