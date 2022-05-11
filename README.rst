@@ -69,7 +69,7 @@ Portable to all releases of both Python 3 and Python 2.
 back as 2.2 when paired with something like |with|_.)
 
 .. |with| replace:: ``with-as-a-function``
-.. _with: https://pypi.org/with-as-a-function
+.. _with: https://pypi.org/project/with-as-a-function
 
 On implementations of Python where setting the exception chaining
 attributes on an exception raises an ``AttributeError``,
