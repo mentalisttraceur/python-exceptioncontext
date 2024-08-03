@@ -65,10 +65,11 @@ Portability
 
 Portable to all releases of both Python 3 and Python 2.
 
-(The oldest tested is 2.5,
-but it will likely work as far back as 2.2
-when paired with something like `with-as-a-function
-<https://pypi.org/project/with-as-a-function>`_.)
+(The oldest tested is 2.5, but it will likely work as far
+back as 2.2 when paired with something like |with|_.)
+
+.. |with| replace:: ``with-as-a-function``
+.. _with: https://pypi.org/project/with-as-a-function
 
 On implementations of Python where setting the exception chaining
 attributes on an exception raises an ``AttributeError``,
